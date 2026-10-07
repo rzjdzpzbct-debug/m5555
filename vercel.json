@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/download.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
-}
