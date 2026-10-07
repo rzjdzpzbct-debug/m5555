@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Instagram HD Downloader</title>
+<meta name="description" content="تحميل فيديوهات Instagram بأعلى جودة متاحة">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <section class="card">
+    <div class="logo">HD</div>
+    <h1>Instagram Downloader</h1>
+    <p class="sub">نزّل الفيديو بأعلى جودة متاحة</p>
+
+    <form id="form">
+      <div class="input-wrap">
+        <input id="url" type="url" inputmode="url" autocomplete="off"
+          placeholder="الصق رابط Instagram هنا..." required>
+        <button type="button" id="paste">لصق</button>
+      </div>
+      <button class="download" type="submit" id="submit">تحميل الفيديو</button>
+    </form>
+
+    <div id="status" class="status hidden"></div>
+    <a id="result" class="result hidden" target="_blank" rel="noopener">فتح الفيديو للتحميل</a>
+
+    <p class="note">أعلى جودة متاحة فقط — لا يمكن استرجاع جودة غير موجودة في المصدر.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
