@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07120f">
+  <title>نور | آية على الفيديو</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="mark">۞</div>
+      <p class="eyebrow">استوديو قرآني بسيط</p>
+      <h1>نور <span>— آية على الفيديو</span></h1>
+      <p class="sub">أضف آيتك، شاهد ظهورها التدريجي، ثم صدّر الفيديو من جهازك.</p>
+    </header>
+
+    <section class="panel">
+      <label class="field-title" for="videoFile">١. اختر الفيديو</label>
+      <input id="videoFile" type="file" accept="video/*">
+      <p class="hint">الأفضل فيديو عمودي 9:16. تتم المعالجة داخل المتصفح على جهازك.</p>
+      <div class="preview-wrap">
+        <video id="sourceVideo" playsinline controls></video>
+        <canvas id="previewCanvas" aria-label="معاينة الآية على الفيديو"></canvas>
+        <div id="emptyPreview" class="empty-preview"><span>۞</span><br>اختر فيديو حتى تبدأ المعاينة</div>
+      </div>
+      <div class="preview-actions">
+        <button id="playPreview" class="btn secondary" disabled>▶ معاينة الحركة</button>
+        <button id="pausePreview" class="btn secondary" disabled>Ⅱ إيقاف المعاينة</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <label class="field-title" for="ayahText">٢. اكتب الآية أو النص القرآني</label>
+      <textarea id="ayahText" rows="3" placeholder="اكتب الآية هنا…">يَا عِبَادِيَ الَّذِينَ آمَنُوا إِنَّ أَرْضِي وَاسِعَةٌ</textarea>
+      <p class="hint">راجع النص والتشكيل بنفسك قبل التصدير للتأكد من مطابقته للمصحف.</p>
+
+      <div class="settings-grid">
+        <div>
+          <label for="position">مكان الآية</label>
+          <select id="position">
+            <option value="center">المنتصف</option>
+            <option value="bottom" selected>أسفل الفيديو</option>
+            <option value="top">أعلى الفيديو</option>
+          </select>
+        </div>
+        <div>
+          <label for="duration">مدة ظهور الآية</label>
+          <select id="duration">
+            <option value="3">٣ ثوانٍ</option>
+            <option value="5" selected>٥ ثوانٍ</option>
+            <option value="8">٨ ثوانٍ</option>
+            <option value="12">١٢ ثانية</option>
+          </select>
+        </div>
+        <div>
+          <label for="fontSize">حجم الخط</label>
+          <select id="fontSize">
+            <option value="28">صغير</option>
+            <option value="36" selected>متوسط</option>
+            <option value="44">كبير</option>
+            <option value="52">كبير جداً</option>
+          </select>
+        </div>
+        <div>
+          <label for="textColor">لون النص</label>
+          <select id="textColor">
+            <option value="#fff4d2" selected>عاجي</option>
+            <option value="#ffffff">أبيض</option>
+            <option value="#e4c16f">ذهبي</option>
+            <option value="#c8f3dd">أخضر فاتح</option>
+          </select>
+        </div>
+      </div>
+      <label class="check"><input id="backplate" type="checkbox" checked> خلفية داكنة شفافة خلف الآية</label>
+      <button id="startExport" class="btn primary" disabled>✦ إنشاء الفيديو</button>
+      <p id="status" class="status" role="status">اختر فيديو أولاً.</p>
+      <div id="resultBox" class="result" hidden>
+        <p>اكتمل التصدير إذا كان المتصفح يدعم التسجيل.</p>
+        <a id="downloadLink" class="btn primary" download="ayah-video.mp4">حفظ الفيديو</a>
+        <p id="formatNote" class="hint"></p>
+      </div>
+    </section>
+
+    <footer>نور • أداة محلية داخل المتصفح — لا ترفع الفيديو إلى خادم</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
