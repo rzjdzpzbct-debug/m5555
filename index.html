@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b10">
+  <title>سكينة | القرآن الكريم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="backdrop"></div>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark">۞</div>
+      <div>
+        <p class="eyebrow">مساحة للطمأنينة</p>
+        <h1>سَكِينَة</h1>
+      </div>
+      <button id="themeBtn" class="icon-btn" aria-label="تغيير المظهر">☾</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">القرآن الكريم</span>
+        <h2>أنصت بقلبك،<br>واطمئن بذكر الله</h2>
+        <p>لحظات هادئة مع التلاوة والذكر.</p>
+      </div>
+    </section>
+
+    <section class="player-card">
+      <div class="artwork" role="img" aria-label="زهور شتوية مغطاة بالثلج"></div>
+      <div class="track-info">
+        <div>
+          <span class="eyebrow">التلاوة الحالية</span>
+          <h2 id="trackTitle">تلاوة قرآنية</h2>
+          <p id="trackSubtitle">اختر إحدى التلاوات أدناه</p>
+        </div>
+        <span class="sound-mark">♫</span>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress"><span id="progressFill"></span></div>
+        <div class="time-row"><span id="elapsed">بث مباشر / فيديو</span><span id="duration">YouTube</span></div>
+      </div>
+
+      <div class="controls">
+        <button class="skip-btn" id="prevBtn" aria-label="التلاوة السابقة">⏮</button>
+        <button class="play-btn" id="playBtn" aria-label="تشغيل التلاوة">▶</button>
+        <button class="skip-btn" id="nextBtn" aria-label="التلاوة التالية">⏭</button>
+      </div>
+      <p class="hint" id="status">اختَر تلاوة ثم اضغط تشغيل</p>
+      <div class="volume-row"><span>◖))</span><input id="volume" type="range" min="0" max="100" value="80" aria-label="مستوى الصوت"><span>🔊</span></div>
+      <div class="youtube-frame" id="youtubeFrame" aria-label="مشغل YouTube"></div>
+      <p class="small-note">ملاحظة: تشغيل الصوت يعتمد على مشغّل YouTube؛ قد تحتاج إلى الضغط على زر التشغيل داخل المشغّل أيضاً.</p>
+    </section>
+
+    <section class="playlist-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">استمع الآن</span><h2>قائمة التلاوات</h2></div>
+        <span class="count">02</span>
+      </div>
+      <button class="track active" data-index="0">
+        <span class="track-number">01</span><span class="track-icon">▶</span>
+        <span class="track-text"><strong>تلاوة قرآنية هادئة</strong><small>فيديو YouTube</small></span><span class="track-more">•••</span>
+      </button>
+      <button class="track" data-index="1">
+        <span class="track-number">02</span><span class="track-icon">▶</span>
+        <span class="track-text"><strong>بث قرآني مباشر</strong><small>بث مباشر من YouTube</small></span><span class="track-more">•••</span>
+      </button>
+    </section>
+
+    <footer>اللهم اجعل القرآن ربيع قلوبنا ونور صدورنا</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
